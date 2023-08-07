@@ -32,12 +32,12 @@ jobs:
 
       - name: Access API_ACCESS_TOKEN
         env:
-          API_ACCESS_TOKEN: $
+          API_ACCESS_TOKEN: ${{ secrets.API_ACCESS_TOKEN }}
         run: echo API_ACCESS_TOKEN=\"$API_ACCESS_TOKEN\" > ./local.properties
 
       - name: Access ACCOUNT_ID
         env:
-          ACCOUNT_ID: $
+          ACCOUNT_ID: ${{ secrets.ACCOUNT_ID }}
         run: echo ACCOUNT_ID=\"$ACCOUNT_ID\" > ./local.properties
 
       - name: Build and Generate APK
